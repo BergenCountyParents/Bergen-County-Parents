@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -58,6 +59,18 @@
 
 <script>
   document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+window.netlifyIdentity.on("init", user => {
+if (!user) {
+window.netlifyIdentity.on("login", () => {
+document.location.href = "/admin/";
+});
+}
+});
+}
 </script>
 </body>
 </html>
