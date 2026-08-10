@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: Local Guides
+description: Town-by-town guides and insider knowledge for Bergen County families.
+activeNav: guides
+permalink: category-guides.html
+---
+<div class="wrap">
+  <div class="category-hero">
+    <span class="eyebrow">Category</span>
+    <h1>Local guides</h1>
+    <p>The insider stuff — quiet spots, town-by-town breakdowns, and the things you only find out after living here a while.</p>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="post-grid" style="padding-top:44px;">
+    {% for post in collections.posts %}
+      {% if post.data.category == "guides" %}
+      <article class="post-card post-card-photo">
+        <div class="post-photo">Photo placeholder</div>
+        <div class="post-topline">
+          <span class="leaf-chip" style="--leaf:{{ post.data.leafColor }}">
+            <svg viewBox="0 0 200 200" fill="none"><path d="M100 20 C150 40 170 90 150 140 C130 180 100 190 100 190 C100 190 70 180 50 140 C30 90 50 40 100 20 Z" stroke="currentColor" stroke-width="14"/></svg>
+            <span class="leaf-chip-town">{{ post.data.town }}</span>
+          </span>
+        </div>
+        <span class="post-kicker">{{ post.data.categoryLabel }}</span>
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <p>{{ post.data.dek }}</p>
+        <span class="post-meta">{{ post.data.readTime }} min read · {{ post.date | readableDate }}</span>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </section>
+</main>

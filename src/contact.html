@@ -1,0 +1,113 @@
+---
+permalink: contact.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Bergen County Parents</title>
+<meta name="description" content="Get in touch with Bergen County Parents — tips, corrections, event submissions, or guest post pitches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap masthead-bar-inner">
+    <span>Bergen County, New Jersey</span>
+    <span class="masthead-date" id="today-date"></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <img src="images/logo.png" alt="Bergen County Parents logo">
+      <span class="wordmark-main">Bergen County <span class="accent">Parents</span></span>
+      <span class="wordmark-tag">Family life, rooted local</span>
+    </a>
+  </div>
+</header>
+
+<nav class="town-nav">
+  <div class="wrap town-nav-inner">
+    <a href="category-things-to-do.html" class="town-pill">Things to do</a>
+    <a href="category-events.html" class="town-pill">Events</a>
+    <a href="category-resources.html" class="town-pill">Parenting resources</a>
+    <a href="category-guides.html" class="town-pill">Local guides</a>
+    <a href="recommended-businesses.html" class="town-pill">Recommended businesses</a>
+    <a href="about.html" class="town-pill town-pill-quiet">About</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="category-hero">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Contact us</h1>
+    <p>Tips, corrections, event submissions, or guest post pitches — this goes straight to our inbox.</p>
+  </div>
+</div>
+
+<div class="contact-grid">
+
+  <form onsubmit="return false;">
+    <div class="contact-form-field">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Jane Smith" required>
+    </div>
+    <div class="contact-form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@email.com" required>
+    </div>
+    <div class="contact-form-field">
+      <label for="reason">What's this about</label>
+      <select id="reason">
+        <option>General question</option>
+        <option>Event submission</option>
+        <option>Guest post pitch</option>
+        <option>Correction or update</option>
+        <option>Advertising inquiry</option>
+      </select>
+    </div>
+    <div class="contact-form-field">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Tell us what's on your mind" required></textarea>
+    </div>
+    <button type="submit" class="contact-submit">Send message</button>
+  </form>
+
+  <aside class="contact-side">
+    <h2>Prefer email?</h2>
+    <p>Reach us directly at <a href="mailto:info@bergencountyparents.com" class="email-link">info@bergencountyparents.com</a> — we read everything, even if replies take a few days during the busy season.</p>
+    <div class="contact-side-divider"></div>
+    <h2>Submitting an event?</h2>
+    <p>Include the date, location, whether it's free, and an age range if it applies. We add community events to the calendar weekly.</p>
+    <div class="contact-side-divider"></div>
+    <h2>Want to write for us?</h2>
+    <p>We're always open to local parents covering their own town. Tell us your town and what you'd want to write about.</p>
+  </aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-word">Bergen County Parents</span>
+      <p class="footer-note">Independently written and edited in Bergen County, NJ.</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:info@bergencountyparents.com">info@bergencountyparents.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+</script>
+</body>
+</html>

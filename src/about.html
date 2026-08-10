@@ -1,0 +1,95 @@
+---
+permalink: about.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bergen County Parents</title>
+<meta name="description" content="Bergen County Parents is an independently written local resource for families across the county.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap masthead-bar-inner">
+    <span>Bergen County, New Jersey</span>
+    <span class="masthead-date" id="today-date"></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <img src="images/logo.png" alt="Bergen County Parents logo">
+      <span class="wordmark-main">Bergen County <span class="accent">Parents</span></span>
+      <span class="wordmark-tag">Family life, rooted local</span>
+    </a>
+  </div>
+</header>
+
+<nav class="town-nav">
+  <div class="wrap town-nav-inner">
+    <a href="category-things-to-do.html" class="town-pill">Things to do</a>
+    <a href="category-events.html" class="town-pill">Events</a>
+    <a href="category-resources.html" class="town-pill">Parenting resources</a>
+    <a href="category-guides.html" class="town-pill">Local guides</a>
+    <a href="recommended-businesses.html" class="town-pill">Recommended businesses</a>
+    <a href="about.html" class="town-pill town-pill-quiet is-active">About</a>
+  </div>
+</nav>
+
+<main class="simple-page">
+  <h1>About Bergen County Parents</h1>
+  <p class="lede">A local resource for families across Bergen County — things to do, what's happening, and the practical stuff that doesn't come with a welcome packet.</p>
+
+  <div class="about-photo">Photo placeholder — county scenery or team photo</div>
+
+  <p>Bergen County Parents started with a simple frustration: finding out what's actually worth doing with your kids in this county means digging through a dozen town Facebook groups, three different Instagram accounts, and whatever your neighbor happens to mention at pickup. We wanted one place that pulled it together.</p>
+
+  <p>We're not a syndicated national site running local keywords for traffic. Everything here is written by people who actually live in Bergen County, dealing with the same kindergarten cutoffs and splash pad closures as everyone reading it. Where we can, we credit contributors by name — parents from Ridgewood, Tenafly, Hackensack, and everywhere in between who know their corner of the county better than we ever could from a desk.</p>
+
+  <div class="value-grid">
+    <div class="value-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      <h3>Actually current</h3>
+      <p>We update posts when things change — closures, new dates, corrected details — instead of leaving stale info up indefinitely.</p>
+    </div>
+    <div class="value-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 2.5 4 6.5 4c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 4 0 6 4 4 8.5C19 16.65 12 21 12 21z"/></svg>
+      <h3>Written locally</h3>
+      <p>No syndicated content, no national franchise. Every post is written by someone who lives here.</p>
+    </div>
+    <div class="value-card">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <h3>No sponsored filler</h3>
+      <p>If something's listed, it's because it's genuinely worth your Saturday — not because someone paid for the placement.</p>
+    </div>
+  </div>
+
+  <p>Want to write for us? We're always open to guest contributors covering their own town — reach out through the <a href="contact.html" style="color:var(--orange-dark); font-weight:800;">contact page</a> and tell us what you'd want to write about.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-word">Bergen County Parents</span>
+      <p class="footer-note">Independently written and edited in Bergen County, NJ.</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:info@bergencountyparents.com">info@bergencountyparents.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+</script>
+</body>
+</html>

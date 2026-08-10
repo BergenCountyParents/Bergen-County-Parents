@@ -1,0 +1,144 @@
+---
+permalink: list-your-business.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Your Business — Bergen County Parents</title>
+<meta name="description" content="Get your local business featured on Bergen County Parents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap masthead-bar-inner">
+    <span>Bergen County, New Jersey</span>
+    <span class="masthead-date" id="today-date"></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <img src="images/logo.png" alt="Bergen County Parents logo">
+      <span class="wordmark-main">Bergen County <span class="accent">Parents</span></span>
+      <span class="wordmark-tag">Family life, rooted local</span>
+    </a>
+  </div>
+</header>
+
+<nav class="town-nav">
+  <div class="wrap town-nav-inner">
+    <a href="category-things-to-do.html" class="town-pill">Things to do</a>
+    <a href="category-events.html" class="town-pill">Events</a>
+    <a href="category-resources.html" class="town-pill">Parenting resources</a>
+    <a href="category-guides.html" class="town-pill">Local guides</a>
+    <a href="recommended-businesses.html" class="town-pill">Recommended businesses</a>
+    <a href="about.html" class="town-pill town-pill-quiet">About</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="category-hero">
+    <span class="eyebrow">For local businesses</span>
+    <h1>List your business</h1>
+    <p>Get featured in front of Bergen County parents actively looking for recommendations — not just another directory listing.</p>
+  </div>
+</div>
+
+<div class="simple-page">
+
+  <div class="edit-flag">Andrew — replace the placeholder prices below with your real rates before this goes live.</div>
+
+  <div class="pricing-strip">
+    <div class="price-card">
+      <div class="price-tier">Standard listing</div>
+      <div class="price-amount">$XX/mo</div>
+      <div class="price-note">Listed in the directory, category tag, link to your website</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Featured listing</div>
+      <div class="price-amount">$XX/mo</div>
+      <div class="price-note">Featured badge, top placement, larger card</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Featured + newsletter</div>
+      <div class="price-amount">$XX/mo</div>
+      <div class="price-note">Featured listing plus one mention in the weekly email</div>
+    </div>
+  </div>
+
+  <p class="lede" style="font-size:15px;">How it works: fill out the form below with your business details. We review every submission personally — this isn't an automated directory. If it's a fit, we'll follow up with a secure payment link to complete your listing.</p>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="contact-form-field">
+      <label for="biz-name">Business name</label>
+      <input type="text" id="biz-name" name="business_name" placeholder="Little Portraits Studio" required>
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-category">Category</label>
+      <select id="biz-category" name="category">
+        <option>Photography</option>
+        <option>Kids activities</option>
+        <option>Pediatric health</option>
+        <option>Tutoring / education</option>
+        <option>Food / restaurants</option>
+        <option>Retail</option>
+        <option>Events / entertainment</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-town">Town</label>
+      <input type="text" id="biz-town" name="town" placeholder="Ridgewood" required>
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-website">Website</label>
+      <input type="url" id="biz-website" name="website" placeholder="https://yourbusiness.com">
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-email">Contact email</label>
+      <input type="email" id="biz-email" name="email" placeholder="you@yourbusiness.com" required>
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-tier">Interested in</label>
+      <select id="biz-tier" name="tier">
+        <option>Standard listing</option>
+        <option>Featured listing</option>
+        <option>Featured + newsletter</option>
+        <option>Not sure yet</option>
+      </select>
+    </div>
+    <div class="contact-form-field">
+      <label for="biz-description">Tell us about your business</label>
+      <textarea id="biz-description" name="description" placeholder="What you do, who it's for, and why Bergen County parents should know about you" required></textarea>
+    </div>
+    <button type="submit" class="contact-submit">Submit for review</button>
+  </form>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-word">Bergen County Parents</span>
+      <p class="footer-note">Independently written and edited in Bergen County, NJ.</p>
+    </div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:info@bergencountyparents.com">info@bergencountyparents.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+</script>
+</body>
+</html>

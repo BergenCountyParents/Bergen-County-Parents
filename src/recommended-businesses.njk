@@ -1,0 +1,52 @@
+---
+layout: base.njk
+title: Recommended Businesses
+description: Local businesses recommended for Bergen County families.
+activeNav: businesses
+permalink: recommended-businesses.html
+---
+<div class="wrap">
+  <div class="category-hero">
+    <span class="eyebrow">Category</span>
+    <h1>Recommended businesses</h1>
+    <p>Local, parent-approved businesses worth knowing about. Featured listings are paid placements from businesses we've personally reviewed.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div style="padding-top:32px; display:flex; justify-content:flex-end;">
+    <a href="/list-your-business.html" class="read-link">List your business here <span aria-hidden="true">→</span></a>
+  </div>
+
+  <section class="biz-grid">
+    {% for biz in collections.businesses %}
+      {% if biz.data.featured %}
+      <article class="biz-card is-featured">
+        <span class="biz-ribbon">Featured</span>
+        <div class="biz-logo">{{ biz.data.initials }}</div>
+        <div>
+          <span class="biz-category">{{ biz.data.category }}</span>
+          <h3>{{ biz.data.name }}</h3>
+          <p>{{ biz.data.description }}</p>
+          <a href="{{ biz.data.website }}" class="biz-link">Visit website →</a>
+        </div>
+      </article>
+      {% endif %}
+    {% endfor %}
+    {% for biz in collections.businesses %}
+      {% if not biz.data.featured %}
+      <article class="biz-card">
+        <div class="biz-logo">{{ biz.data.initials }}</div>
+        <div>
+          <span class="biz-category">{{ biz.data.category }}</span>
+          <h3>{{ biz.data.name }}</h3>
+          <p>{{ biz.data.description }}</p>
+          <a href="{{ biz.data.website }}" class="biz-link">Visit website →</a>
+        </div>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+</main>
