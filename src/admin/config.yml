@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/posts"
+public_folder: "/images/posts"
+
+collections:
+  - name: "posts"
+    label: "Blog posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Town", name: "town", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Things to do", value: "things-to-do" }
+          - { label: "Events", value: "events" }
+          - { label: "Parenting resources", value: "resources" }
+          - { label: "Local guides", value: "guides" }
+      - label: "Category label (shown on page)"
+        name: "categoryLabel"
+        widget: "select"
+        options: ["Things to do", "Events", "Parenting resources", "Local guides"]
+      - label: "Tag color"
+        name: "leafColor"
+        widget: "select"
+        options:
+          - { label: "Orange", value: "#E2792B" }
+          - { label: "Sage green", value: "#6E9A52" }
+          - { label: "Forest green", value: "#2F4A34" }
+          - { label: "Light green", value: "#8FB56C" }
+      - { label: "Read time (minutes)", name: "readTime", widget: "number" }
+      - { label: "Summary (shown on cards)", name: "dek", widget: "text" }
+      - { label: "Hero photo", name: "heroImage", widget: "image", required: false }
+      - { label: "Author name", name: "authorName", widget: "string" }
+      - { label: "Author initials", name: "authorInitials", widget: "string" }
+      - { label: "Author role", name: "authorRole", widget: "string" }
+      - { label: "Author bio", name: "authorBio", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "businesses"
+    label: "Recommended businesses"
+    folder: "src/businesses"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Business name", name: "name", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Town", name: "town", widget: "string" }
+      - { label: "Website", name: "website", widget: "string" }
+      - { label: "Contact email", name: "email", widget: "string", required: false }
+      - { label: "Logo initials", name: "initials", widget: "string" }
+      - { label: "Featured (paid placement)", name: "featured", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "text" }
