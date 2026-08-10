@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} — Bergen County Parents</title>
+<meta name="description" content="{{ description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap masthead-bar-inner">
+    <span>Bergen County, New Jersey</span>
+    <span class="masthead-date" id="today-date"></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="/index.html" class="wordmark">
+      <img src="/images/logo.png" alt="Bergen County Parents logo">
+      <span class="wordmark-main">Bergen County <span class="accent">Parents</span></span>
+      <span class="wordmark-tag">Family life, rooted local</span>
+    </a>
+  </div>
+</header>
+
+<nav class="town-nav">
+  <div class="wrap town-nav-inner">
+    <a href="/category-things-to-do.html" class="town-pill {% if activeNav == 'things-to-do' %}is-active{% endif %}">Things to do</a>
+    <a href="/category-events.html" class="town-pill {% if activeNav == 'events' %}is-active{% endif %}">Events</a>
+    <a href="/category-resources.html" class="town-pill {% if activeNav == 'resources' %}is-active{% endif %}">Parenting resources</a>
+    <a href="/category-guides.html" class="town-pill {% if activeNav == 'guides' %}is-active{% endif %}">Local guides</a>
+    <a href="/recommended-businesses.html" class="town-pill {% if activeNav == 'businesses' %}is-active{% endif %}">Recommended businesses</a>
+    <a href="/about.html" class="town-pill town-pill-quiet {% if activeNav == 'about' %}is-active{% endif %}">About</a>
+  </div>
+</nav>
+
+{{ content | safe }}
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="footer-word">Bergen County Parents</span>
+      <p class="footer-note">Independently written and edited in Bergen County, NJ.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="mailto:info@bergencountyparents.com">info@bergencountyparents.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+</script>
+</body>
+</html>

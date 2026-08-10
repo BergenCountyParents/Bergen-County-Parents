@@ -1,0 +1,70 @@
+---
+layout: base.njk
+---
+<main class="wrap">
+  <div class="article-hero">Photo placeholder — hero image: {{ heroImage or "add photo via CMS" }}</div>
+</main>
+
+<article class="article-wrap">
+
+  <div class="article-topline">
+    <span class="post-kicker" style="margin-bottom:0">{{ categoryLabel }}</span>
+    <span class="leaf-chip" style="--leaf:{{ leafColor }}">
+      <svg viewBox="0 0 200 200" fill="none" width="14" height="14"><path d="M100 20 C150 40 170 90 150 140 C130 180 100 190 100 190 C100 190 70 180 50 140 C30 90 50 40 100 20 Z" stroke="currentColor" stroke-width="14"/></svg>
+      <span class="leaf-chip-town">{{ town }}</span>
+    </span>
+  </div>
+
+  <h1>{{ title }}</h1>
+
+  <div class="article-meta">
+    <div class="author-avatar">{{ authorInitials }}</div>
+    <div class="article-meta-text">
+      Written by <strong>{{ authorName }}</strong><br>
+      {{ page.date | readableDate }} · {{ readTime }} min read
+    </div>
+  </div>
+
+  <div class="article-body">
+    {{ content | safe }}
+  </div>
+
+  <div class="author-bio">
+    <div class="author-avatar">{{ authorInitials }}</div>
+    <div>
+      <p class="author-bio-name">{{ authorName }}</p>
+      <p class="author-bio-role">{{ authorRole }}</p>
+      <p>{{ authorBio }}</p>
+    </div>
+  </div>
+
+</article>
+
+<div class="wrap">
+  <div class="section-divider">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2 C17 5 19 11 16 16 C13 20 11 21 11 21 C11 21 9 20 6 16 C3 11 5 5 11 2 Z" stroke="currentColor" stroke-width="2"/></svg>
+    <span>Keep reading</span>
+  </div>
+
+  <section class="post-grid">
+    {% set relatedCount = 0 %}
+    {% for post in collections.posts %}
+      {% if post.url != page.url and relatedCount < 3 %}
+        {% set relatedCount = relatedCount + 1 %}
+        <article class="post-card post-card-photo">
+          <div class="post-photo">Photo placeholder</div>
+          <div class="post-topline">
+            <span class="leaf-chip" style="--leaf:{{ post.data.leafColor }}">
+              <svg viewBox="0 0 200 200" fill="none"><path d="M100 20 C150 40 170 90 150 140 C130 180 100 190 100 190 C100 190 70 180 50 140 C30 90 50 40 100 20 Z" stroke="currentColor" stroke-width="14"/></svg>
+              <span class="leaf-chip-town">{{ post.data.town }}</span>
+            </span>
+          </div>
+          <span class="post-kicker">{{ post.data.categoryLabel }}</span>
+          <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+          <p>{{ post.data.dek }}</p>
+          <span class="post-meta">{{ post.data.readTime }} min read · {{ post.date | readableDate }}</span>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </section>
+</div>
